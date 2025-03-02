@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: purchases
+    description: "Purchases data mart."
+    columns:
+      - name: order_id
+        description: "Primary key, unique identifier for each order."
+        tests:
+          - not_null
+          - unique
+      - name: order_date
+      - name: customer_id
+      - name: order_amount
+      - name: order_created_at
+      - name: order_updated_at
+      - name: order_uploaded_at
+
+      - name: transaction_id
+        description: "Unique identifier for the transaction."
+        tests:
+          - not_null
+          - unique
+      - name: payment_method
+      - name: transaction_amount
+      - name: transaction_created_at
+      - name: transaction_updated_at
+      - name: transaction_uploaded_at
+
+      - name: verification_id
+        description: "Unique identifier for each verification record."
+        tests:
+          - not_null
+          - unique
+      - name: verification_status
+      - name: verification_created_at
+      - name: verification_updated_at
+      - name: verification_uploaded_at
+
+      - name: uploaded_at
+        description: "Timestamp indicating when the purchase record was inserted or updated in the purchases data mart."
+        tests:
+          - not_null
