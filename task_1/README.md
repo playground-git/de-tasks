@@ -1,5 +1,7 @@
 # Task 1
 
+I decided to use dbt, because it's easy to create a project, add some test data and it provides many useful features.
+
 ## How to run it
 1. Create python virtual evnironment:
 `python3 -m venv .venv`
